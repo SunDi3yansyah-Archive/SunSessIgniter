@@ -19,8 +19,13 @@ $password = array(
 </head>
 <body>
 	<?php echo form_open($this->uri->uri_string); ?>
-		<?php echo form_input($username); ?>
-		<?php echo form_input($password); ?>
+		<?php if (isset($error)): ?>
+			<?php echo $error; ?>
+		<?php endif ?>
+		<?php echo form_error('username'); ?><br>
+		<?php echo form_input($username); ?><br>
+		<?php echo form_error('password'); ?><br>
+		<?php echo form_input($password); ?><br><br>
 		<?php echo form_submit('submit', 'Submit'); ?>
 	<?php echo form_close(); ?>
 </body>

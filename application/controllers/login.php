@@ -27,9 +27,11 @@ class Login extends CI_Controller {
 						redirect('login/loggedin');
 					}
 				} else {
-					redirect();
+					$data = array(
+						'error' => 'Gagal login, silakan ulang kembali'
+						);
+					$this->load->view('login', $data);
 				}
-				
 			} else {
 				$this->load->view('login');
 			}
