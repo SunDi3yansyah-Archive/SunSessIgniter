@@ -6,3 +6,8 @@
 - Adding .htaccess on your root folder (for remove index.php)
 - Edit config.php and database.php
 - Done
+
+## Access
+
+- Username `SunDi3yansyah`
+- Password `passwd`
